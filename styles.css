@@ -107,11 +107,12 @@ body {
 
   .container {
     background-color: white;
-    height: 1000px;
+    height: auto;
     width: 70%;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 40px;
   }
 
   #post1 {
@@ -123,21 +124,25 @@ body {
     width: auto;
     margin: 0 40px;
     margin-bottom: 0;
-    display: flex;
+    display: block;
 
     .image img {
-      height: 300px;
-      width: 300px;
+      height: auto;
+      width: 100%;
     }
-    .main {
-      font-size: large;
+
+    .heading {
+      margin-bottom: 20px;
+    }
+    .description {
+      font-size: medium;
     }
   }
   .post button {
     border: 0;
     border-bottom: 2px solid #08a4a7;
     padding: 0;
-    font-size: 18px;
+    font-size: larger;
     background-color: transparent;
     transition-duration: 0.3s;
     cursor: pointer;
@@ -148,12 +153,6 @@ body {
   }
 
 
-  .main {
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 10px 20px;
-    background-color: transparent;
-  }
   .date {
     font-size: small;
     color: gray;
@@ -163,6 +162,7 @@ body {
   }
 
   .hr {
+    display: block;
     height: 2px;
     width: auto;
     margin: 20px 40px;
@@ -283,25 +283,13 @@ body {
       background-color: rgb(221, 221, 221);
       }
 
-    #post1 {
-      margin-top: 20px;
-    }  
-
     .post {
       height: auto;
       width: auto%;
       margin: 0 20px;
       margin-bottom: 0;
-  
-      .image img {
-        height: 200px;
-        width: 200px;
-      }
-
-      .main {
-        font-size: 2vw;
-      }
     }
+
     .post button {
       margin-right: 150px;
       border: 0;
