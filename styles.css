@@ -1,0 +1,317 @@
+body {
+    font-family: sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  .header {
+    display: flex;
+
+    .logo img {
+        width: 150px;
+        background-color: white;
+        height: 100%;
+        padding: 0px 10px;
+        border-right: 1px solid rgb(221, 221, 221);
+        border-radius: 0 20px 0 0;
+    }
+    
+    .logo-mobile {
+        display: none;
+    }
+
+  }
+
+  nav{
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+
+  nav ul{
+    display: inline-block;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: gray;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active {
+    color: white;
+    background: #08a4a7;
+    margin-left: 20px;
+  }
+
+  a:hover{
+    color: white;
+    background: #08a4a7;
+    transition: .3s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  
+  .second-topnav {
+    background-color: white;
+    overflow: hidden;
+    width: 70%;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .second-topnav a {
+    float: left;
+    color: gray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .second-topnav a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .second-topnav a.active {
+    background-color: white;
+    color: gray;
+  }
+
+  .container {
+    background-color: white;
+    height: 1000px;
+    width: 70%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #post1 {
+    margin-top: 40px;
+  }
+
+  .post {
+    height: auto;
+    width: auto;
+    margin: 0 40px;
+    margin-bottom: 0;
+    display: flex;
+
+    .image img {
+      height: 300px;
+      width: 300px;
+    }
+    .main {
+      font-size: large;
+    }
+  }
+  .post button {
+    border: 0;
+    border-bottom: 2px solid #08a4a7;
+    padding: 0;
+    font-size: 18px;
+    background-color: transparent;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    text-wrap: nowrap;
+  }
+  .post button:hover {
+    border-bottom: 2px solid white;
+  }
+
+
+  .main {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 20px;
+    background-color: transparent;
+  }
+  .date {
+    font-size: small;
+    color: gray;
+  }
+  .description {
+    margin: 20px 0;
+  }
+
+  .hr {
+    height: 2px;
+    width: auto;
+    margin: 20px 40px;
+    background-color: rgb(221, 221, 221);
+    }
+
+  .sidepanel {
+    background-color: whitesmoke;
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  #form {
+    padding-left: 10px;
+    padding-right: 40px;
+    margin-top: 80px;
+  }
+  #form input {
+    width: 100%;
+    margin-right: 40px;
+    height: 48px;
+    border: 0;
+    padding: 20px;
+    border-radius: 100px;
+  }
+  #search-icon {
+    color: #08a4a7;
+    position: absolute;
+    top: 90px;
+    right: 60px;
+  }
+
+  @media (max-width: 858px) {
+
+
+    nav{
+      background: transparent;
+      height: 80px;
+      width: 100%;
+      display: block;
+      position: sticky;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .header {
+      display: block;
+      
+      .logo-mobile {
+          display: block;
+      }
+      .logo-mobile img {
+          height: 100%;
+          width: 150px;
+          padding: 20px 10px;
+      }
+  
+    }
+
+  .fa-bars {
+      color: #08a4a7;
+  }
+
+  .second-topnav {
+      width: 100%;
+    }
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 40%;
+      height: 100vh;
+      background: whitesmoke;
+      border: 1px solid rgb(221, 221, 221);
+      top: 0px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 40px;
+      line-height: 20px;
+      text-align: left;
+    }
+    nav ul li a{
+      font-size: 20px;
+      color: black;
+    }
+      a:hover{
+      background: none;
+      color: #0082e6;
+    }
+     a.active{
+      background: none;
+      color: black;
+      margin-left: 0;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+
+    .container {
+      width: 100%;
+    }
+
+    .hr {
+      height: 2px;
+      width: auto;
+      margin: 20px 20px;
+      background-color: rgb(221, 221, 221);
+      }
+
+    #post1 {
+      margin-top: 20px;
+    }  
+
+    .post {
+      height: auto;
+      width: auto%;
+      margin: 0 20px;
+      margin-bottom: 0;
+  
+      .image img {
+        height: 200px;
+        width: 200px;
+      }
+
+      .main {
+        font-size: 2vw;
+      }
+    }
+    .post button {
+      margin-right: 150px;
+      border: 0;
+      border-bottom: 2px solid #08a4a7;
+      font-size: 16px;
+      text-wrap: nowrap;
+    }
+
+    .sidepanel {
+      display: none;
+    }
+    
+  }
