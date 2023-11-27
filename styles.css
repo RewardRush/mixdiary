@@ -111,20 +111,22 @@ body {
     width: 70%;
     margin-top: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
     padding-bottom: 40px;
-  }
-
-  #post1 {
-    margin-top: 40px;
+    padding: 40px;
   }
 
   .post {
     height: auto;
     width: auto;
-    margin: 0 40px;
     margin-bottom: 0;
-    display: block;
+    display: inline-block;
+    width: 47%;
+    border: 1px solid rgb(221, 221, 221);
+    padding: 4% 2%;
 
     .image img {
       height: auto;
@@ -160,14 +162,6 @@ body {
   .description {
     margin: 20px 0;
   }
-
-  .hr {
-    display: block;
-    height: 2px;
-    width: auto;
-    margin: 20px 40px;
-    background-color: rgb(221, 221, 221);
-    }
 
   .sidepanel {
     background-color: whitesmoke;
@@ -230,6 +224,7 @@ body {
 
   .fa-bars {
       color: #08a4a7;
+      margin-right: -20px;
   }
 
   .second-topnav {
@@ -241,23 +236,24 @@ body {
     ul{
       position: fixed;
       width: 40%;
-      height: 100vh;
+      height: 100%;
       background: whitesmoke;
       border: 1px solid rgb(221, 221, 221);
       top: 0px;
       left: -100%;
       text-align: center;
       transition: all .5s;
+      padding: 20px;
     }
     nav ul li{
       display: block;
-      margin: 50px 40px;
-      line-height: 20px;
+      margin: 0;
+      line-height: 50px;
       text-align: left;
     }
     nav ul li a{
-      font-size: 20px;
-      color: black;
+      font-size: 18px;
+      color: gray;
     }
       a:hover{
       background: none;
@@ -265,7 +261,7 @@ body {
     }
      a.active{
       background: none;
-      color: black;
+      color: gray;
       margin-left: 0;
     }
     #check:checked ~ ul{
@@ -274,20 +270,17 @@ body {
 
     .container {
       width: 100%;
+      display: block;
+      flex-direction: column;
+      padding: 0 20px;
+      padding-bottom: 40px;
     }
-
-    .hr {
-      height: 2px;
-      width: auto;
-      margin: 20px 20px;
-      background-color: rgb(221, 221, 221);
-      }
 
     .post {
       height: auto;
-      width: auto%;
-      margin: 0 20px;
-      margin-bottom: 0;
+      width: auto;
+      width: auto;
+      margin-top: 40px;
     }
 
     .post button {
