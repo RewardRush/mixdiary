@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Genetic engineering has witnessed a paradigm shift with the advent of CRISPR-Cas9, a revolutionary technology that allows scientists to precisely edit DNA. Let's delve into the fascinating world of CRISPR and explore its implications across various domains.">
+    <title>CRISPR-Cas9: Unlocking the Power of Genetic Editing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+
+    body {
+    font-family: sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+ }
+
+ *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  .header {
+    display: flex;
+
+    .logo img {
+        width: 150px;
+        background-color: white;
+        height: 100%;
+        padding: 0px 10px;
+        border-right: 1px solid rgb(221, 221, 221);
+        border-radius: 0 20px 0 0;
+    }
+    
+    .logo-mobile {
+        display: none;
+    }
+
+  }
+
+  nav{
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+
+  nav ul{
+    display: inline-block;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: gray;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active {
+    color: gray;
+    background: transparent;
+    margin-left: 20px;
+  }
+
+  a:hover{
+    color: white;
+    background: #08a4a7;
+    transition: .3s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  
+  .second-topnav {
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .second-topnav a {
+    float: left;
+    color: gray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .second-topnav a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .second-topnav a.active {
+    background-color: white;
+    color: gray;
+  }      
+  .container {
+        font-family: Arial, sans-serif;
+         max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        margin-top: 10px;
+    }
+
+    h1 {
+        color: black;
+    }
+
+    p {
+      margin: 20px 0;
+    }
+
+    em {
+        color: #6C757D;
+    }
+
+    .container img {
+         max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+  
+
+  @media (max-width: 800px) {
+
+
+    nav{
+      background: transparent;
+      height: 80px;
+      width: 100%;
+      display: block;
+      position: sticky;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .header {
+      display: block;
+      
+      .logo-mobile {
+          display: block;
+      }
+      .logo-mobile img {
+          height: 100%;
+          width: 150px;
+          padding: 20px 10px;
+      }
+  
+    }
+
+  .fa-bars {
+      color: #08a4a7;
+      margin-right: -20px;
+  }
+
+  .second-topnav {
+      width: 100%;
+    }
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 40%;
+      height: 100%;
+      background: whitesmoke;
+      border: 1px solid rgb(221, 221, 221);
+      top: 0px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      padding: 20px;
+    }
+    nav ul li{
+      display: block;
+      margin: 0;
+      line-height: 50px;
+      text-align: left;
+    }
+    nav ul li a{
+      font-size: 18px;
+      color: gray;
+    }
+      a:hover{
+      background: none;
+      color: #0082e6;
+    }
+     a.active{
+      background: none;
+      color: gray;
+      margin-left: 0;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+
+  }
+
+    </style>
+  </head>
+<body>
+
+    <header class="header">
+        <label class="logo"><img src="logo.svg" alt=""></label>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo-mobile"><img src="logo.svg" alt=""></label>
+            <ul>
+              <li><a class="active" href="https://mixdiary.mooo.com/">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <div class="second-topnav">
+        <a class="active" href="#home">Science</a>
+        <a href="#news">Technology</a>
+        <a href="#contact">Health</a>
+        <a href="#about">Entertainment</a>
+    </div>
+
+    <div class="container">
+        <h1>CRISPR-Cas9: Unlocking the Power of Genetic Editing</h1>
+
+        <p>
+            <em>Published on December 3, 2023</em>
+        </p>
+
+        <p>
+          Genetic engineering has witnessed a paradigm shift with the advent of CRISPR-Cas9, a revolutionary
+          technology that allows scientists to precisely edit DNA. Let's delve into the fascinating world of
+          CRISPR and explore its implications across various domains.
+      </p>
+
+      <h2>The CRISPR-Cas9 Mechanism</h2>
+
+      <img src="https://img.freepik.com/premium-photo/genomic-editing-techniques-crafting-future-disease-prevention_674594-33474.jpg?w=826" alt="CRISPR-Cas9 Diagram">
+
+      <p>
+          At the core of CRISPR-Cas9 is its elegant mechanism. The system comprises two main components:
+          the guide RNA (gRNA) and the Cas9 protein. The gRNA serves as a molecular guide, directing Cas9
+          to the specific DNA sequence targeted for modification. Once at the target site, Cas9 acts as
+          molecular scissors, precisely cutting the DNA.
+      </p>
+
+      <h2>Precision and Versatility</h2>
+
+      <img src="https://www.shutterstock.com/shutterstock/photos/2156291903/display_1500/stock-photo-crispr-cas-genome-editing-enzyme-d-illustration-2156291903.jpg" alt="CRISPR-Cas9 Precision">
+
+      <p>
+          One of the defining features of CRISPR-Cas9 is its unprecedented precision. Scientists can design
+          custom gRNAs to target specific genes with accuracy, allowing for highly targeted modifications.
+          This level of precision opens up new possibilities for both basic research and therapeutic
+          applications.
+      </p>
+
+      <h2>Applications Across Industries</h2>
+
+      <img src="https://img.freepik.com/premium-photo/microscopic-view-sperm-cells-intense-motion-symbolizing-complex-world-male_706554-1251.jpg?w=826" alt="Applications of CRISPR-Cas9">
+
+      <p>
+          CRISPR-Cas9's impact extends beyond medicine. In agriculture, it is employed to develop genetically
+          modified crops with enhanced traits, such as increased resistance to pests or improved nutritional
+          content. The technology's versatility positions it as a transformative tool across various fields.
+      </p>
+
+      <h2>The Future of CRISPR-Cas9</h2>
+
+      <p>
+          As we look to the future, CRISPR-Cas9 holds immense promise. Ongoing research aims to refine the
+          technology, address ethical considerations, and explore novel applications. The potential to treat
+          genetic disorders that were once considered incurable is within reach, marking a new era in
+          genetic engineering.
+      </p>
+
+      <p>
+          In conclusion, CRISPR-Cas9 stands as a groundbreaking technology that has unlocked the door to
+          precise genetic editing. Its applications continue to expand, shaping the way we approach
+          healthcare, agriculture, and beyond. The journey of CRISPR-Cas9 is a testament to the relentless
+          pursuit of understanding and manipulating the building blocks of life.
+      </p>
+    </div>
+
+</body>
+</html>
