@@ -54,8 +54,8 @@ body {
     text-transform: uppercase;
   }
   a.active {
-    color: white;
-    background: #08a4a7;
+    color: gray;
+    background: white;
     margin-left: 20px;
   }
 
