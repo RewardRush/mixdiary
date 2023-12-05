@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="logo.svg">
+    <title>The Importance of Maintaining a Healthy Lifestyle</title>
+    <meta name="description" content="Explore the key aspects of maintaining a healthy lifestyle. Learn the importance of a balanced diet, regular exercise, quality sleep, stress management, and avoiding harmful substances for overall well-being. Start your journey to a healthier you!">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+
+    body {
+    font-family: sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+ }
+
+ *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  .header {
+    display: flex;
+
+    .logo img {
+        width: 150px;
+        background-color: white;
+        height: 100%;
+        padding: 0px 10px;
+        border-right: 1px solid rgb(221, 221, 221);
+        border-radius: 0 20px 0 0;
+    }
+    
+    .logo-mobile {
+        display: none;
+    }
+
+  }
+
+  nav{
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+
+  nav ul{
+    display: inline-block;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: gray;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active {
+    color: gray;
+    background: transparent;
+    margin-left: 20px;
+  }
+
+  a:hover{
+    color: white;
+    background: #08a4a7;
+    transition: .3s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  
+  .second-topnav {
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .second-topnav a {
+    float: left;
+    color: gray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .second-topnav a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .second-topnav a.active {
+    background-color: white;
+    color: gray;
+  }      
+  .container {
+        font-family: Arial, sans-serif;
+         max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        margin-top: 10px;
+    }
+
+    h1 {
+        color: black;
+    }
+
+    em {
+        color: #6C757D;
+    }
+
+    .container img {
+         max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+  
+
+  @media (max-width: 800px) {
+
+
+    nav{
+      background: transparent;
+      height: 80px;
+      width: 100%;
+      display: block;
+      position: sticky;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .header {
+      display: block;
+      
+      .logo-mobile {
+          display: block;
+      }
+      .logo-mobile img {
+          height: 100%;
+          width: 150px;
+          padding: 20px 10px;
+      }
+  
+    }
+
+  .fa-bars {
+      color: #08a4a7;
+      margin-right: -20px;
+  }
+
+  .second-topnav {
+      width: 100%;
+    }
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 40%;
+      height: 100%;
+      background: whitesmoke;
+      border: 1px solid rgb(221, 221, 221);
+      top: 0px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      padding: 20px;
+    }
+    nav ul li{
+      display: block;
+      margin: 0;
+      line-height: 50px;
+      text-align: left;
+    }
+    nav ul li a{
+      font-size: 18px;
+      color: gray;
+    }
+      a:hover{
+      background: none;
+      color: #0082e6;
+    }
+     a.active{
+      background: none;
+      color: gray;
+      margin-left: 0;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+
+  }
+
+    </style>
+  </head>
+<body>
+
+    <header class="header">
+        <label class="logo"><img src="logo.svg" alt=""></label>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo-mobile"><img src="logo.svg" alt=""></label>
+            <ul>
+              <li><a class="active" href="https://mixdiary.mooo.com/">Home</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <div class="second-topnav">
+        <a class="active" href="#home">Science</a>
+        <a href="#news">Technology</a>
+        <a href="#contact">Health</a>
+        <a href="#about">Entertainment</a>
+    </div>
+
+    <div class="container">
+      <p>
+        <em>Published on December 3, 2023</em>
+      </p>
+        <h1>The Importance of Maintaining a Healthy Lifestyle</h1>
+        <p>Explore the key aspects of a healthy life and how it contributes to overall well-being.</p>
+
+    <section>
+        <img src="https://img.freepik.com/free-photo/man-athlete-drinking-water-out-plastic-bottle-after-hard-running-workout-dark-skinned-male-sportsman-looking-sky-while-running-enjoying-view_176420-19865.jpg?w=740&t=st=1701778032~exp=1701778632~hmac=cdb60458c2566d84ccd9045de82693c1b23be18050e7caadef264b0b1907e61c" alt="Healthy Lifestyle">
+        <p>Living a healthy lifestyle is crucial for maintaining good physical and mental health. It involves making informed choices about nutrition, exercise, sleep, and other factors that contribute to well-being.</p>
+        
+        <p>A well-rounded approach to health includes:</p>
+        <ul>
+            <li>Consuming a balanced diet</li>
+            <li>Engaging in regular physical activity</li>
+            <li>Getting adequate sleep</li>
+            <li>Managing stress levels</li>
+            <li>Avoiding harmful substances</li>
+        </ul>
+
+        <p>Let's delve deeper into each of these aspects.</p>
+    </section>
+
+    <section>
+        <img src="https://img.freepik.com/free-photo/plate-with-keto-diet-food-cherry-tomatoes-chicken-breast-eggs-carrot-salad-with-arugula-spinach-keto-lunch_2829-16953.jpg?w=740&t=st=1701778142~exp=1701778742~hmac=383e808bd08d21d811e671d48a42ae11149d3df7184e0644fbaef32fc09fe55d" alt="Balanced Diet">
+        <h2>1. Balanced Diet</h2>
+        <p>One of the cornerstones of a healthy lifestyle is maintaining a balanced diet. Consuming a variety of nutrient-rich foods provides the body with essential vitamins and minerals needed for optimal functioning.</p>
+        
+        <p>Key components of a balanced diet include:</p>
+        <ul>
+            <li>Fruits and vegetables</li>
+            <li>Whole grains</li>
+            <li>Lean proteins</li>
+            <li>Healthy fats</li>
+            <li>Dairy or dairy alternatives</li>
+        </ul>
+
+        <p>Ensure that you include a colorful array of fruits and vegetables in your diet to benefit from a wide range of nutrients.</p>
+    </section>
+
+    <section>
+        <img src="https://img.freepik.com/premium-photo/black-man-fitness-stretching-leg-city-street-urban-outdoors-sports-health-happy-male-from-nigeria-ground-warm-up-getting-ready-running-training-workout-exercise-alone_590464-92354.jpg?w=740" alt="Regular Exercise">
+        <h2>2. Regular Exercise</h2>
+        <p>Regular exercise is key to physical fitness. It not only helps in weight management but also improves cardiovascular health, boosts mood, and enhances overall energy levels.</p>
+        
+        <p>Consider incorporating a mix of aerobic exercises (such as walking, running, or cycling), strength training, and flexibility exercises into your routine. Aim for at least 150 minutes of moderate-intensity exercise per week.</p>
+
+        <p>Find activities you enjoy to make exercise a sustainable part of your lifestyle.</p>
+    </section>
+
+    <section>
+        <img src="https://img.freepik.com/free-photo/man-sleeping-comfortable-bed_329181-13878.jpg?w=740&t=st=1701778358~exp=1701778958~hmac=c0f752e80c972183d8f619f42f49991b9bb591bbb9b49e7f50a9d864e46ea4b0" alt="Adequate Sleep">
+        <h2>3. Adequate Sleep</h2>
+        <p>Quality sleep is essential for overall well-being. Lack of sleep can negatively impact physical and mental health, leading to fatigue, impaired cognitive function, and an increased risk of chronic conditions.</p>
+        
+        <p>Establish a consistent sleep schedule, create a relaxing bedtime routine, and ensure your sleep environment is conducive to rest. Adults generally need 7-9 hours of sleep each night.</p>
+
+        <p>Prioritize sleep as a fundamental pillar of good health.</p>
+    </section>
+
+    <section>
+        <img src="https://img.freepik.com/premium-photo/headache-stress-black-woman-multitasking-documents-portfolio-paperwork-deadlines-with-anxiety-bad-time-management-office-chaos-frustrated-worker-with-fatigue-depression-burnout_590464-135494.jpg?w=740" alt="Stress Management">
+        <h2>4. Stress Management</h2>
+        <p>Chronic stress can have detrimental effects on health. It's important to develop effective stress management techniques to promote mental well-being.</p>
+        
+        <p>Try incorporating activities such as meditation, deep breathing exercises, yoga, or hobbies that bring you joy. Learning to manage stress can contribute to better emotional resilience and overall health.</p>
+
+        <p>Identify stressors in your life and explore healthy ways to cope with them.</p>
+    </section>
+
+    <section>
+        <img src="https://img.freepik.com/free-photo/front-view-cigarette-bad-habit-concept_23-2148540791.jpg?w=740&t=st=1701778546~exp=1701779146~hmac=95a17737d9a07dc6c789d39b4c264bdce739bc823311b83337f787dc06c1d7dc" alt="Avoid Harmful Substances">
+        <h2>5. Avoid Harmful Substances</h2>
+        <p>Avoiding harmful substances, such as tobacco and excessive alcohol, is crucial for maintaining optimal health. These substances can contribute to a variety of health issues, including cardiovascular diseases and certain types of cancer.</p>
+        
+        <p>If you smoke, seek support to quit. Limit alcohol intake to moderate levels, and be mindful of how these substances can impact your health and well-being.</p>
+
+        <p>Make informed choices that promote a healthier lifestyle.</p>
+    </section>
+
+    
+    </div>
+
+</body>
+</html>
