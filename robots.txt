@@ -3,7 +3,6 @@ Disallow:
 User-agent: googlebot-image
 Disallow: 
 User-agent: googlebot-mobile
-Disallow: 
 Sitemap: https://mixdiary.mooo.com/sitemap.xml
 User-agent: *
 Disallow: 
