@@ -1,0 +1,353 @@
+body {
+    font-family: sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  .header {
+    display: flex;
+
+    .logo img {
+        width: 150px;
+        background-color: white;
+        height: 100%;
+        padding: 0px 10px;
+        border-right: 1px solid rgb(221, 221, 221);
+        border-radius: 0 20px 0 0;
+    }
+    
+    .logo-mobile {
+        display: none;
+    }
+
+  }
+
+  nav{
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+
+  nav ul{
+    display: inline-block;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: gray;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active {
+    color: gray;
+    background: transparent;
+    margin-left: 20px;
+  }
+
+  a:hover{
+    color: white;
+    background: #08a4a7;
+    transition: .3s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  
+  .second-topnav {
+    background-color: white;
+    overflow: hidden;
+    width: 70%;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .second-topnav a {
+    float: left;
+    color: gray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .second-topnav a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .second-topnav a.active {
+    background-color: white;
+    color: gray;
+  }
+
+  .container {
+    background-color: white;
+    height: auto;
+    width: 70%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+    padding: 40px;
+  }
+
+  .post {
+    height: auto;
+    width: auto;
+    margin-bottom: 0;
+    display: inline-block;
+    width: 47%;
+    border: 1px solid rgb(221, 221, 221);
+    padding: 4% 2%;
+
+    .image img {
+      height: auto;
+      width: 100%;
+    }
+
+    .heading {
+      margin-bottom: 20px;
+    }
+    .description {
+      font-size: medium;
+    }
+  }
+  .post button {
+    border: 0;
+    border-bottom: 2px solid #08a4a7;
+    padding: 0;
+    font-size: larger;
+    background-color: transparent;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    text-wrap: nowrap;
+  }
+  .post button:hover {
+    border-bottom: 2px solid white;
+  }
+  .post a:hover {
+    background-color: transparent;
+  }
+
+
+  .date {
+    font-size: small;
+    color: gray;
+  }
+  .description {
+    margin: 20px 0;
+  }
+
+  .sidepanel {
+    background-color: whitesmoke;
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  .sidepanel::-webkit-scrollbar {
+    display: none;
+}
+  #form {
+    padding-left: 10px;
+    padding-right: 40px;
+    margin-top: 80px;
+  }
+  #form input {
+    width: 100%;
+    margin-right: 40px;
+    height: 48px;
+    border: 0;
+    padding: 20px;
+    border-radius: 100px;
+  }
+  #search-icon {
+    color: #08a4a7;
+    position: absolute;
+    top: 90px;
+    right: 60px;
+  }
+
+  .sidecontainer {
+    height: 100%;
+    width: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 40px;
+  }
+  .newsletter-container {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.newsletter-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-email {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.subscribe-button {
+    background-color: #FF0000;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #c00505;
+}
+
+  @media (max-width: 800px) {
+
+
+    nav{
+      background: transparent;
+      height: 80px;
+      width: 100%;
+      display: block;
+      position: sticky;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .header {
+      display: block;
+      
+      .logo-mobile {
+          display: block;
+      }
+      .logo-mobile img {
+          height: 100%;
+          width: 150px;
+          padding: 20px 10px;
+      }
+  
+    }
+
+  .fa-bars {
+      color: #08a4a7;
+      margin-right: -20px;
+  }
+
+  .second-topnav {
+      width: 100%;
+    }
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 40%;
+      height: 100%;
+      background: whitesmoke;
+      border: 1px solid rgb(221, 221, 221);
+      top: 0px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      padding: 20px;
+    }
+    nav ul li{
+      display: block;
+      margin: 0;
+      line-height: 50px;
+      text-align: left;
+    }
+    nav ul li a{
+      font-size: 18px;
+      color: gray;
+    }
+      a:hover{
+      background: none;
+      color: #0082e6;
+    }
+     a.active{
+      background: none;
+      color: gray;
+      margin-left: 0;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+
+    .container {
+      width: 100%;
+      display: block;
+      flex-direction: column;
+      padding: 0 20px;
+      padding-bottom: 40px;
+    }
+
+    .post {
+      height: auto;
+      width: auto;
+      width: auto;
+      margin-top: 40px;
+    }
+
+    .post button {
+      margin-right: 150px;
+      border: 0;
+      border-bottom: 2px solid #08a4a7;
+      font-size: 16px;
+      text-wrap: nowrap;
+    }
+
+    .sidepanel {
+      display: none;
+    }
+    
+  }
